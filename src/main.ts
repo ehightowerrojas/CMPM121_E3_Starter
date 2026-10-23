@@ -1,3 +1,6 @@
+import glassesUrl from "./assets/glasses.svg?no-inline";
+import topHatUrl from "./assets/top-hat.svg?no-inline";
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -6,7 +9,7 @@ function buildFace(): SVGSVGElement {
   const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   face.setAttribute("viewBox", "0 0 200 200");
   face.setAttribute("role", "img");
-  face.setAttribute("aria-label", "A neutral face");
+  face.setAttribute("aria-label", "A top hat and glasses face");
 
   const head = document.createElementNS(
     "http://www.w3.org/2000/svg",
@@ -62,6 +65,32 @@ function buildFace(): SVGSVGElement {
   mouth.setAttribute("stroke-width", "4");
   mouth.setAttribute("stroke-linecap", "round");
   face.append(mouth);
+
+  // glasses.svg — created by Evangel, hand-written SVG in VS Code. Own work.
+  const glassesImage = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  glassesImage.setAttribute("href", glassesUrl);
+  glassesImage.setAttribute("x", "50");
+  glassesImage.setAttribute("y", "65");
+  glassesImage.setAttribute("width", "100");
+  glassesImage.setAttribute("height", "34");
+  face.append(glassesImage);
+
+  // top-hat.svg — created by Evangel, hand-written SVG in VS Code. Own work.
+  const topHatImage = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  topHatImage.setAttribute("href", topHatUrl);
+  topHatImage.setAttribute("x", "62");
+  topHatImage.setAttribute("y", "0");
+  topHatImage.setAttribute("width", "70");
+  topHatImage.setAttribute("height", "44");
+  // Tilt the hat slightly to one side, rotating around its own brim.
+  topHatImage.setAttribute("transform", "rotate(-12 97 37)");
+  face.append(topHatImage);
 
   return face;
 }
