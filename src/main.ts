@@ -1,4 +1,6 @@
+// @deno-types="./asset-url.d.ts"
 import glassesUrl from "./assets/glasses.svg?no-inline";
+// @deno-types="./asset-url.d.ts"
 import topHatUrl from "./assets/top-hat.svg?no-inline";
 
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;

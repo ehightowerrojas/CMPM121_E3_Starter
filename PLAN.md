@@ -42,3 +42,14 @@ fade, and the eyebrows are quadratic curves rather than cubic.
 ## Criterion
 
 Choose whichever option seems the most distinct personality when sized down.
+
+## Decision
+
+**Chosen:** branch `B`, the dapper but silly face with round glasses and a tilted top hat.
+
+Measured against my criterion, B had the most distinct personality when sized down. The
+hat and glasses change the face's silhouette, so the character still reads at thumbnail
+size. A's spiky hair was also bold, but the freckles disappeared when small. C had the
+most expression up close, but its soft gradient and thin curves washed out at small sizes.
+
+Alternatives `A` and `C` remain unchanged on their own branches as a record of those explorations.
